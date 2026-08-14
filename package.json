@@ -6,6 +6,14 @@
   "type": "module",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "homepage": "https://github.com/<YOUR-GITHUB-USERNAME>/dsh-record-replay#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<YOUR-GITHUB-USERNAME>/dsh-record-replay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<YOUR-GITHUB-USERNAME>/dsh-record-replay/issues"
+  },
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
@@ -49,7 +57,8 @@
     "typecheck": "tsc -p tsconfig.test.json",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "tsc -p tsconfig.test.json"
+    "lint": "tsc -p tsconfig.test.json",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
   },
   "peerDependencies": {
     "@deepseek-ai/dsh-llm": "^0.1.0-rc.5"
