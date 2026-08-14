@@ -1,0 +1,84 @@
+{
+  "name": "@dsh-contrib/dsh-record-replay",
+  "version": "0.1.0",
+  "description": "Record and replay DeepSeek Harness LLM calls for offline development and CI. Companion to @deepseek-ai/dsh-llm-replay; adds user-facing record, redact, diff, merge, and inspect tooling.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./recorder": {
+      "types": "./lib/recorder.d.ts",
+      "default": "./lib/recorder.js"
+    },
+    "./replayer": {
+      "types": "./lib/replayer.d.ts",
+      "default": "./lib/replayer.js"
+    },
+    "./fixture": {
+      "types": "./lib/fixture.d.ts",
+      "default": "./lib/fixture.js"
+    },
+    "./redact": {
+      "types": "./lib/redact.d.ts",
+      "default": "./lib/redact.js"
+    },
+    "./strategies": {
+      "types": "./lib/strategies.d.ts",
+      "default": "./lib/strategies.js"
+    },
+    "./invariant": {
+      "types": "./lib/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    }
+  },
+  "bin": {
+    "dsh-rec": "./lib/cli.js"
+  },
+  "files": [
+    "lib/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -p tsconfig.test.json"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": "^0.1.0-rc.5"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-llm": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-llm": "^0.1.0-rc.5",
+    "@types/node": "^22.20.0",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "llm",
+    "replay",
+    "record",
+    "fixture",
+    "snapshot",
+    "cordis"
+  ]
+}

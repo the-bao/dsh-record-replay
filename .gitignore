@@ -1,0 +1,10 @@
+node_modules/
+lib/
+lib_old/
+__trash_*/
+*.log
+.DS_Store
+coverage/
+.vscode/
+.idea/
+*.tsbuildinfo
