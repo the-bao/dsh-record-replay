@@ -78,6 +78,11 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "overrides": {
+    "npm": {
+      "legacy-peer-deps": true
+    }
+  },
   "keywords": [
     "deepseek",
     "dsh",
