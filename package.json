@@ -6,13 +6,13 @@
   "type": "module",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "homepage": "https://github.com/<YOUR-GITHUB-USERNAME>/dsh-record-replay#readme",
+  "homepage": "https://github.com/the-bao/dsh-record-replay#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/<YOUR-GITHUB-USERNAME>/dsh-record-replay.git"
+    "url": "https://github.com/the-bao/dsh-record-replay.git"
   },
   "bugs": {
-    "url": "https://github.com/<YOUR-GITHUB-USERNAME>/dsh-record-replay/issues"
+    "url": "https://github.com/the-bao/dsh-record-replay/issues"
   },
   "exports": {
     ".": {

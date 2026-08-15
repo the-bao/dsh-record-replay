@@ -31,16 +31,11 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Set up pnpm cache
-        uses: pnpm/action-setup@v4
-        with:
-          version: 11
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
 
       - name: Verify tag matches package.json version
         run: |
@@ -52,7 +47,7 @@ jobs:
           fi
 
       - name: Publish to npm
-        run: pnpm publish --access public --provenance
+        run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -63,7 +58,7 @@ jobs:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     steps:
       - name: Check out
-        uses: actions/checkout@11bd71901bbe5b4010fe871289130173f811b218
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 

@@ -25,19 +25,14 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Set up pnpm cache
-        uses: pnpm/action-setup@v4
-        with:
-          version: 11
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Typecheck
-        run: pnpm run typecheck
+        run: npm run typecheck
 
       - name: Unit tests
-        run: pnpm test
+        run: npm test
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
